@@ -11,6 +11,3 @@ REM Install Brave
 curl -L "https://raw.githubusercontent.com/mike37510/mescontainers/main/brave_installer-x64.exe" --output "C:\users\WDAGUtilityAccount\brave_installer-x64.exe"
 "%SystemRoot%\system32\cmd.exe" /c "C:\users\WDAGUtilityAccount\brave_installer-x64.exe" --silent
 
-REM Dark Mode
-reg add HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 00000000 /f
-start /wait taskkill /F /IM SystemSettings.exe
