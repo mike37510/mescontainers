@@ -14,3 +14,8 @@ curl -L "https://raw.githubusercontent.com/mike37510/mescontainers/main/OpenVPN-
 REM Install Brave
 curl -L "https://raw.githubusercontent.com/mike37510/mescontainers/main/brave_installer-x64.exe" --output "C:\users\WDAGUtilityAccount\brave_installer-x64.exe"
 "%SystemRoot%\system32\cmd.exe" /c "C:\users\WDAGUtilityAccount\brave_installer-x64.exe" --silent
+
+REM Install Wallpaper
+curl -L "https://raw.githubusercontent.com/mike37510/mescontainers/main/wallpaper.jpg" --output "C:\users\WDAGUtilityAccount\wallpaper.jpg"
+reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d C:\users\WDAGUtilityAccount\wallpaper.jpg /f
+RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
