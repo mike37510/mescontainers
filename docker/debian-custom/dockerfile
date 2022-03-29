@@ -1,0 +1,17 @@
+# --------------- DÉBUT COUCHE OS -------------------
+FROM debian:stable-slim
+# --------------- FIN COUCHE OS ---------------------
+
+# ------- MÉTADONNÉES DE L'IMAGE --------------------
+LABEL version="1.0" maintainer="Mike <mike37510@gmail.com>"
+
+
+# --------------- UPDATE ----------------------------
+RUN apt-get update -y && \
+    apt-get upgrade
+# --------------- FIN UPDATE ------------------------
+
+# --------------- INSTALL APP -----------------------
+RUN apt-get install nano &&
+# --------------- FIN UPDATE ------------------------
+
