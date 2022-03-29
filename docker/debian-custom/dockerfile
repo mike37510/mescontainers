@@ -14,3 +14,11 @@ RUN apt-get update -y && \
 # --------------- INSTALL APP -----------------------
 RUN apt-get install nano -y
 # --------------- FIN UPDATE ------------------------
+
+# --------------- INSTALL APP -----------------------
+RUN apt-get install openssh-server -y && \
+    systemctl enable ssh && \
+    apt-get install wget -y && \
+    wget
+    service ssh start
+# --------------- FIN UPDATE ------------------------
