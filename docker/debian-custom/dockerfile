@@ -12,6 +12,6 @@ RUN apt-get update -y && \
 # --------------- FIN UPDATE ------------------------
 
 # --------------- INSTALL APP -----------------------
-RUN apt-get install nano &&
+RUN apt-get install nano -y
 # --------------- FIN UPDATE ------------------------
 
